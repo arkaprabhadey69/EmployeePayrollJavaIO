@@ -1,0 +1,3 @@
+id= 1, name= Arka,salary 50000
+id= 2, name= Away,salary 60000
+id= 3, name= Ark,salary 70000
