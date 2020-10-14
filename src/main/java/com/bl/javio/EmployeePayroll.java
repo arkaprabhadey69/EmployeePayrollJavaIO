@@ -19,7 +19,7 @@ public class EmployeePayroll {
    public void welcomeMessage(){
         System.out.println("Welcome to employee payroll system");
    }
-
+//Method to write to a file
    public void writeData(ArrayList<EmployeePayrollData> employeePayrollList) {
         StringBuffer empBuffer = new StringBuffer();
         employeePayrollList.forEach(employee -> {
