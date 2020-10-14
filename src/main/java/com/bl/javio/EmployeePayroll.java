@@ -65,7 +65,7 @@ public class EmployeePayroll {
         }
         return entries;
     }
-
+//Method to read from file
     public long readData(ArrayList<EmployeePayrollData> employeePayrollList) {
 
         try {

@@ -1,0 +1,4 @@
+ id= 1, name= Arka,salary 50000
+&id= 2, name= Swapnaneel,salary 60000
+!id= 3, name= Pooja,salary 70000
+$id= 3, name= Srikanth,salary 70000
