@@ -54,7 +54,7 @@ public class EmployeePayroll {
 
         }
     }
-
+//Method to count entries
     public long countEntries() {
         long entries = 0;
         try {
@@ -66,7 +66,7 @@ public class EmployeePayroll {
         return entries;
     }
 
-    public ArrayList<EmployeePayrollData> readData(ArrayList<EmployeePayrollData> employeePayrollList) {
+    public long readData(ArrayList<EmployeePayrollData> employeePayrollList) {
 
         try {
             Files.lines(new File("Employee_PayRoll.txt").toPath()).map(line -> line.trim()).forEach(line -> System.out.println(line));
@@ -74,6 +74,6 @@ public class EmployeePayroll {
         } catch (IOException e) {
 
         }
-        return employeePayrollList;
+        return employeePayrollList.size();
     }
 }

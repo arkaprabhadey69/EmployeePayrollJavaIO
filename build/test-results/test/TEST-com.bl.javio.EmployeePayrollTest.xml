@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bl.javio.EmployeePayrollTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-14T07:51:09" hostname="LAPTOP-JP0FR8LN" time="0.02">
+<testsuite name="com.bl.javio.EmployeePayrollTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-14T08:00:20" hostname="LAPTOP-JP0FR8LN" time="0.015">
   <properties/>
-  <testcase name="given3NamesShouldBeWrittenToFileAndPrintFromFile" classname="com.bl.javio.EmployeePayrollTest" time="0.02"/>
-  <system-out><![CDATA[id= 1, name= Arka,salary 50000
-id= 2, name= Swapnaneel,salary 60000
-id= 3, name= Pooja,salary 70000
-]]></system-out>
+  <testcase name="given3NamesShouldBeWrittenToFile" classname="com.bl.javio.EmployeePayrollTest" time="0.015"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

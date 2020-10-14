@@ -50,6 +50,26 @@ public class EmployeePayrollTest {
         EmployeePayrollData[] emp = {
                 new EmployeePayrollData(1, "Arka", 50000),
                 new EmployeePayrollData(2, "Swapnaneel", 60000),
+                new EmployeePayrollData(3, "Pooja", 70000),
+                new EmployeePayrollData(3, "Srikanth", 70000)
+        };
+        ArrayList<EmployeePayrollData> arrayList = new ArrayList<>();
+        arrayList.add(emp[0]);
+        arrayList.add(emp[1]);
+        arrayList.add(emp[2]);
+        arrayList.add(emp[3]);
+        EmployeePayroll employeePayroll = new EmployeePayroll(arrayList);
+        employeePayroll.writeData(arrayList);
+        employeePayroll.printData();
+        long entries=employeePayroll.countEntries();
+        Assert.assertEquals(4,entries);
+
+    }
+    @Test
+    public void shouldReadPayrollFromFile() {
+        EmployeePayrollData[] emp = {
+                new EmployeePayrollData(1, "Arka", 50000),
+                new EmployeePayrollData(2, "Swapnaneel", 60000),
                 new EmployeePayrollData(3, "Pooja", 70000)
         };
         ArrayList<EmployeePayrollData> arrayList = new ArrayList<>();
@@ -58,8 +78,7 @@ public class EmployeePayrollTest {
         arrayList.add(emp[2]);
         EmployeePayroll employeePayroll = new EmployeePayroll(arrayList);
         employeePayroll.writeData(arrayList);
-        employeePayroll.printData();
-        long entries=employeePayroll.countEntries();
+        long entries=employeePayroll.readData(arrayList);
         Assert.assertEquals(3,entries);
 
     }
