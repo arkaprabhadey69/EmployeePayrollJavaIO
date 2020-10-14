@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bl.javio.EmployeePayrollTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-14T09:05:48" hostname="LAPTOP-JP0FR8LN" time="0.021">
-  <properties/>
-  <testcase name="givenPathConfirm" classname="com.bl.javio.EmployeePayrollTest" time="0.021"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

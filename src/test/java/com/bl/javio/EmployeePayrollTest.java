@@ -25,7 +25,7 @@ public class EmployeePayrollTest {
         Assert.assertTrue(Files.exists(homePath));
 
         Path playPath = Paths.get(HOME + "/" + PLAY);
-        if(Files.exists(playPath))
+        if (Files.exists(playPath))
             Files.walk(playPath)
                     .sorted(Comparator.reverseOrder())
                     .map(Path::toFile)
@@ -34,13 +34,12 @@ public class EmployeePayrollTest {
             Files.createDirectory(playPath);
         Assert.assertTrue(Files.exists(playPath));
 
-        IntStream.rangeClosed(1,10).forEach(counter->{
-            Path tempFile= Paths.get(playPath+"/temp"+counter);
+        IntStream.rangeClosed(1, 10).forEach(counter -> {
+            Path tempFile = Paths.get(playPath + "/temp" + counter);
             Assert.assertTrue(Files.notExists(tempFile));
             try {
                 Files.createFile(tempFile);
-            }
-            catch (IOException e){
+            } catch (IOException e) {
 
             }
             Assert.assertTrue(Files.exists(tempFile));
@@ -60,10 +59,11 @@ public class EmployeePayrollTest {
         arrayList.add(emp[2]);
         EmployeePayroll employeePayroll = new EmployeePayroll(arrayList);
         employeePayroll.writeData(arrayList);
-        long entries=employeePayroll.countEntries();
-        Assert.assertEquals(3,entries);
+        long entries = employeePayroll.countEntries();
+        Assert.assertEquals(3, entries);
 
     }
+
     @Test
     public void given3NamesShouldBeWrittenToFileAndPrintFromFile() {
         EmployeePayrollData[] emp = {
@@ -80,10 +80,11 @@ public class EmployeePayrollTest {
         EmployeePayroll employeePayroll = new EmployeePayroll(arrayList);
         employeePayroll.writeData(arrayList);
         employeePayroll.printData();
-        long entries=employeePayroll.countEntries();
-        Assert.assertEquals(4,entries);
+        long entries = employeePayroll.countEntries();
+        Assert.assertEquals(4, entries);
 
     }
+
     @Test
     public void shouldReadPayrollFromFile() {
         EmployeePayrollData[] emp = {
@@ -99,8 +100,8 @@ public class EmployeePayrollTest {
         arrayList.add(emp[3]);
         EmployeePayroll employeePayroll = new EmployeePayroll(arrayList);
         employeePayroll.writeData(arrayList);
-        long entries=employeePayroll.readData(arrayList);
-        Assert.assertEquals(4,entries);
+        long entries = employeePayroll.readData(arrayList);
+        Assert.assertEquals(4, entries);
 
     }
 }
