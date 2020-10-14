@@ -45,4 +45,22 @@ public class EmployeePayrollTest {
         Assert.assertEquals(3,entries);
 
     }
+    @Test
+    public void given3NamesShouldBeWrittenToFileAndPrintFromFile() {
+        EmployeePayrollData[] emp = {
+                new EmployeePayrollData(1, "Arka", 50000),
+                new EmployeePayrollData(2, "Swapnaneel", 60000),
+                new EmployeePayrollData(3, "Pooja", 70000)
+        };
+        ArrayList<EmployeePayrollData> arrayList = new ArrayList<>();
+        arrayList.add(emp[0]);
+        arrayList.add(emp[1]);
+        arrayList.add(emp[2]);
+        EmployeePayroll employeePayroll = new EmployeePayroll(arrayList);
+        employeePayroll.writeData(arrayList);
+        employeePayroll.printData();
+        long entries=employeePayroll.countEntries();
+        Assert.assertEquals(3,entries);
+
+    }
 }

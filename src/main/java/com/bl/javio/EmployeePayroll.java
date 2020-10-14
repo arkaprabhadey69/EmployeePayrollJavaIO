@@ -44,7 +44,7 @@ public class EmployeePayroll {
         employeePayrollList.add(new EmployeePayrollData(id, name, salary));
 
     }
-
+//Method to print employee payroll
     public void printData() {
         try {
             Files.lines(new File("Employee_PayRoll.txt").toPath())
