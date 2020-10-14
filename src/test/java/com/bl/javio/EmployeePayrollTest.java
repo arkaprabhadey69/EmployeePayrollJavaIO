@@ -10,6 +10,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.stream.IntStream;
 
 import static org.junit.Assert.*;
 
@@ -23,9 +25,26 @@ public class EmployeePayrollTest {
         Assert.assertTrue(Files.exists(homePath));
 
         Path playPath = Paths.get(HOME + "/" + PLAY);
+        if(Files.exists(playPath))
+            Files.walk(playPath)
+                    .sorted(Comparator.reverseOrder())
+                    .map(Path::toFile)
+                    .forEach(File::delete);
         if (Files.notExists(playPath))
             Files.createDirectory(playPath);
         Assert.assertTrue(Files.exists(playPath));
+
+        IntStream.rangeClosed(1,10).forEach(counter->{
+            Path tempFile= Paths.get(playPath+"/temp"+counter);
+            Assert.assertTrue(Files.notExists(tempFile));
+            try {
+                Files.createFile(tempFile);
+            }
+            catch (IOException e){
+
+            }
+            Assert.assertTrue(Files.exists(tempFile));
+        });
     }
 
     @Test
